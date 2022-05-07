@@ -37,6 +37,10 @@ const GlobalStyles = createGlobalStyle`
     font-size: 2rem;
     line-height: var(--medium);
   }
+
+  a {
+    color: var(--highlight);
+  }
 `
 
 export default GlobalStyles
