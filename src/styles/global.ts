@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #eeeeee;
 
     --container: 100rem;
-    
+
     --small: 1.5rem;
     --medium: 3rem;
     --large: 5rem;
@@ -22,9 +22,11 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
   }
-
+  
   html, body, #__next {
     height: 100%;
+    background: var(--background);
+    color: var(--white);
   }
 
   body {
