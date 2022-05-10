@@ -3,9 +3,12 @@ import { render, screen } from '@testing-library/react'
 import LinkWrapper from '.'
 
 describe('<LinkWrapper />', () => {
-  it('should render', () => {
-    render(<LinkWrapper />)
+  it('should render link and children', () => {
+    render(<LinkWrapper href="/my-link">Anything</LinkWrapper>)
 
-    expect(screen.getByTestId('link-wrapper')).toBeInTheDocument()
+    const children = screen.getByText(/anything/i)
+
+    expect(children).toBeInTheDocument()
+    expect(children).toHaveAttribute('href', '/my-link')
   })
 })
