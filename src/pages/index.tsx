@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <LinkWrapper href="/about">
-        <InfoOutline />
+        <InfoOutline size={32} aria-label="about" />
       </LinkWrapper>
       <Map
         places={[
