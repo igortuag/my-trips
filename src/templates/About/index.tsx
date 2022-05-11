@@ -11,10 +11,12 @@ const AboutTemplate = () => (
     <S.Heading>My Trips</S.Heading>
 
     <S.Body>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-      ratione, amet, eum quo repellat quibusdam accusamus at soluta voluptatem,
-      esse vero nihil enim doloribus. Eligendi, perspiciatis? Dignissimos veniam
-      aliquam omnis!
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+        ratione, amet, eum quo repellat quibusdam accusamus at soluta
+        voluptatem, esse vero nihil enim doloribus. Eligendi, perspiciatis?
+        Dignissimos veniam aliquam omnis!
+      </p>
     </S.Body>
   </S.Content>
 )
