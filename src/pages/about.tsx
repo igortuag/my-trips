@@ -1,5 +1,13 @@
 import AboutTemplate from 'templates/About'
 
-const About = () => <AboutTemplate />
+export default function AboutPage() {
+  return <AboutTemplate />
+}
 
-export default About
+export const getStaticProps = async () => {
+  return {
+    props: {
+      title: 'About'
+    }
+  }
+}
