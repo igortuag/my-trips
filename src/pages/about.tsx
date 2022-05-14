@@ -1,8 +1,13 @@
 import client from 'graphql/client'
 import { GET_PAGES } from 'graphql/queries'
+import { useRouter } from 'next/dist/client/router'
 import PageTemplate from 'templates/Pages'
 
 export default function AboutPage() {
+  const router = useRouter()
+
+  if (router.isFallback) return null
+
   return <PageTemplate />
 }
 
