@@ -7,13 +7,15 @@ export default function AboutPage() {
 }
 
 export async function getStaticPaths() {
-  const { pages } = await client.request(GET_PAGES)
+  const { pages } = await client.request(GET_PAGES, {
+    first: 3
+  })
 
   const paths = pages.map(({ slug }) => ({
     params: { slug }
   }))
 
-  return { paths }
+  return { paths, fallback: true }
 }
 
 export const getStaticProps = async () => {
