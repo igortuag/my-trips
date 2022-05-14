@@ -6,6 +6,16 @@ export default function AboutPage() {
   return <PageTemplate />
 }
 
+export async function getStaticPaths() {
+  const { pages } = await client.request(GET_PAGES)
+
+  const paths = pages.map(({ slug }) => ({
+    params: { slug }
+  }))
+
+  return { paths }
+}
+
 export const getStaticProps = async () => {
   const { pages } = await client.request(GET_PAGES)
 
