@@ -35,7 +35,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      title: 'About'
+      heading: page.heading,
+      body: page.body.html
     }
   }
 }
