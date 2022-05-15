@@ -4,6 +4,7 @@ export const GET_PAGES = gql`
   query getPages($first: Int) {
     pages(first: $first) {
       id
+      slug
       heading
       body {
         html

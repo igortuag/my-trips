@@ -13,16 +13,13 @@ const PageTemplate = ({ heading, body }: PageTemplateProps) => (
       <CloseOutline size={32} />
     </LinkWrapper>
 
-    <S.Heading>My Trips</S.Heading>
+    <S.Heading>{heading}</S.Heading>
 
-    <S.Body>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-        ratione, amet, eum quo repellat quibusdam accusamus at soluta
-        voluptatem, esse vero nihil enim doloribus. Eligendi, perspiciatis?
-        Dignissimos veniam aliquam omnis!
-      </p>
-    </S.Body>
+    <S.Body
+      dangerouslySetInnerHTML={{
+        __html: body
+      }}
+    />
   </S.Content>
 )
 
