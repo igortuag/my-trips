@@ -25,11 +25,13 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { pages } = await client.request(GET_PAGE_BY_SLUG, {
+  const { page } = await client.request(GET_PAGE_BY_SLUG, {
     slug: `${params?.slug}`
   })
 
-  console.log(pages)
+  if (!page) return { notFound: true }
+
+  console.log(page)
 
   return {
     props: {
