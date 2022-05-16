@@ -1,5 +1,5 @@
 import client from 'graphql/client'
-import { GetPagesQuery } from 'graphql/generated/graphql'
+import { GetPageBySlugQuery, GetPagesQuery } from 'graphql/generated/graphql'
 import { GET_PAGES, GET_PAGE_BY_SLUG } from 'graphql/queries'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { page } = await client.request(GET_PAGE_BY_SLUG, {
+  const { page } = await client.request<GetPageBySlugQuery>(GET_PAGE_BY_SLUG, {
     slug: `${params?.slug}`
   })
 
