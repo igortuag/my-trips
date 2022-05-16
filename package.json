@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
     "@styled-icons/evaicons-outline": "^10.34.0",
     "graphql": "^16.5.0",
     "graphql-request": "^4.2.0",
