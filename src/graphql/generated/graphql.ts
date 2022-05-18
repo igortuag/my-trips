@@ -4104,3 +4104,10 @@ export type GetPlacesQueryVariables = Exact<{
 
 
 export type GetPlacesQuery = { __typename?: 'Query', places: Array<{ __typename?: 'Place', id: string, slug: string, name: string, location: { __typename?: 'Location', latitude: number, longitude: number }, description?: { __typename?: 'RichText', html: string } | null, gallery: Array<{ __typename?: 'Asset', url: string, height?: number | null, width?: number | null }> }> };
+
+export type GetPlaceQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type GetPlaceQuery = { __typename?: 'Query', place?: { __typename?: 'Place', id: string, slug: string, name: string, location: { __typename?: 'Location', latitude: number, longitude: number }, description?: { __typename?: 'RichText', html: string } | null, gallery: Array<{ __typename?: 'Asset', url: string, height?: number | null, width?: number | null }> } | null };
