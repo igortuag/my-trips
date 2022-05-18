@@ -49,7 +49,7 @@ export const GET_PLACES = gql`
 `
 
 export const GET_PLACE_BY_SLUG = gql`
-  query getPlace($slug: String!) {
+  query getPlaceBySlug($slug: String!) {
     place(where: { slug: $slug }) {
       id
       slug
