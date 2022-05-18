@@ -2,22 +2,34 @@ import { CloseOutline } from '@styled-icons/evaicons-outline'
 import LinkWrapper from 'components/LinkWrapper'
 import * as S from './styles'
 
-export type PlaceTemplateProps = {
-  heading: string
-  body: string
+type ImageProps = {
+  url: string
+  height: number
+  width: number
 }
 
-const PlaceTemplate = ({ heading, body }: PlaceTemplateProps) => (
+export type PlaceTemplateProps = {
+  place: {
+    slug: string
+    name: string
+    description: {
+      html: string
+    }
+    galery: ImageProps[]
+  }
+}
+
+const PlaceTemplate = ({ place }: PlaceTemplateProps) => (
   <S.Content>
     <LinkWrapper href="/">
       <CloseOutline size={32} />
     </LinkWrapper>
 
-    <S.Heading>{heading}</S.Heading>
+    <S.Heading>{place.name}</S.Heading>
 
     <S.Body
       dangerouslySetInnerHTML={{
-        __html: body
+        __html: place.description.html
       }}
     />
   </S.Content>

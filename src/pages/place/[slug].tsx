@@ -5,12 +5,12 @@ import { GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import PlaceTemplate, { PlaceTemplateProps } from 'templates/Place'
 
-export default function Place({ heading, body }: PlaceTemplateProps) {
+export default function Place({ place }: PlaceTemplateProps) {
   const router = useRouter()
 
   if (router.isFallback) return null
 
-  return <PlaceTemplate heading={heading} body={body} />
+  return <PlaceTemplate place={place} />
 }
 
 export async function getStaticPaths() {
@@ -36,6 +36,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!place) return { notFound: true }
 
   return {
-    props: place
+    props: { place }
   }
 }
