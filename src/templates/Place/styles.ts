@@ -22,3 +22,5 @@ export const Body = styled.div`
     line-height: var(--medium);
   }
 `
+
+export const Image = styled.img``
