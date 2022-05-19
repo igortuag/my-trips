@@ -25,7 +25,7 @@ const Map = ({ places }: MapProps) => (
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
 
-    {places?.map(({ id, name, location }) => {
+    {places?.map(({ id, slug, name, location }) => {
       const { latitude, longitude } = location
 
       return (
@@ -35,7 +35,7 @@ const Map = ({ places }: MapProps) => (
           title={name}
           eventHandlers={{
             click: () => {
-              console.log(`Clicked on ${name}`)
+              console.log(`Clicked on ${slug}`)
             }
           }}
         />
