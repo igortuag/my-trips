@@ -33,6 +33,11 @@ const Map = ({ places }: MapProps) => (
           key={`place-${id}`}
           position={[latitude, longitude]}
           title={name}
+          eventHandlers={{
+            click: () => {
+              console.log(`Clicked on ${name}`)
+            }
+          }}
         />
       )
     })}
