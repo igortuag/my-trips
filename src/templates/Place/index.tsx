@@ -15,7 +15,7 @@ export type PlaceTemplateProps = {
     description: {
       html: string
     }
-    galery: ImageProps[]
+    gallery: ImageProps[]
   }
 }
 
@@ -33,7 +33,7 @@ const PlaceTemplate = ({ place }: PlaceTemplateProps) => (
       }}
     />
 
-    {place.galery.map(({ url, height, width }, index) => (
+    {place.gallery.map(({ url, height, width }, index) => (
       <S.Image key={index} src={url} height={height} width={width} />
     ))}
   </S.Content>
