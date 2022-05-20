@@ -33,9 +33,11 @@ const PlaceTemplate = ({ place }: PlaceTemplateProps) => (
       }}
     />
 
-    {place.gallery.map(({ url, height, width }, index) => (
-      <S.Image key={index} src={url} height={height} width={width} />
-    ))}
+    <S.Gallery>
+      {place.gallery.map(({ url, height, width }, index) => (
+        <img key={index} src={url} height={height} width={width} />
+      ))}
+    </S.Gallery>
   </S.Content>
 )
 

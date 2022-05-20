@@ -6,7 +6,7 @@ export const Content = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   max-width: var(--container);
   margin: auto;
 `
@@ -23,4 +23,4 @@ export const Body = styled.div`
   }
 `
 
-export const Image = styled.img``
+export const Gallery = styled.div``
