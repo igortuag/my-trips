@@ -20,23 +20,27 @@ export type PlaceTemplateProps = {
 }
 
 const PlaceTemplate = ({ place }: PlaceTemplateProps) => (
-  <S.Content>
+  <>
     <LinkWrapper href="/">
-      <CloseOutline size={32} />
+      <CloseOutline aria-label="Go back to map" size={32} />
     </LinkWrapper>
 
-    <S.Heading>{place.name}</S.Heading>
-
-    <S.Body
-      dangerouslySetInnerHTML={{
-        __html: place.description.html
-      }}
-    />
-
-    {place.gallery.map(({ url, height, width }, index) => (
-      <S.Image key={index} src={url} height={height} width={width} />
-    ))}
-  </S.Content>
+    <S.Wrapper>
+      <S.Container>
+        <S.Heading>{place.name}</S.Heading>
+        <S.Body
+          dangerouslySetInnerHTML={{
+            __html: place.description.html
+          }}
+        />
+        <S.Gallery>
+          {place.gallery.map(({ url, height, width }, index) => (
+            <img key={index} src={url} height={height} width={width} />
+          ))}
+        </S.Gallery>
+      </S.Container>
+    </S.Wrapper>
+  </>
 )
 
 export default PlaceTemplate
