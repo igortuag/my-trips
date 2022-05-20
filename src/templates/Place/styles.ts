@@ -25,6 +25,10 @@ export const Gallery = styled.div`
   display: grid;
   grid-gap: var(--medium);
   img {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
     background: #f6f7f8;
     background-image: linear-gradient(
       to right,
