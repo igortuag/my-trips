@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import { CloseOutline } from '@styled-icons/evaicons-outline'
 import LinkWrapper from 'components/LinkWrapper'
 import * as S from './styles'
@@ -35,7 +37,13 @@ const PlaceTemplate = ({ place }: PlaceTemplateProps) => (
         />
         <S.Gallery>
           {place.gallery.map(({ url, height, width }, index) => (
-            <img key={index} src={url} height={height} width={width} />
+            <Image
+              key={index}
+              src={url}
+              height={height}
+              width={width}
+              quality={75}
+            />
           ))}
         </S.Gallery>
       </S.Container>
