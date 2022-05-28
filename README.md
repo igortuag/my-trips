@@ -7,7 +7,7 @@
 
 This is a [Next.js](https://nextjs.org/) project, a simple project to show my favorite spots in the world.
 
-[Preview](https://my-trips-jade.vercel.app)
+https://my-trips.igortuag.com
 
 ## What is inside?
 
