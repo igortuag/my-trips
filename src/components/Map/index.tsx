@@ -59,6 +59,7 @@ const Map = ({ places }: MapProps) => {
               document.body.clientWidth
 
             if (width < 768) {
+              map.setZoom(2)
               map.setMinZoom(2)
             }
 
