@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://my-trips.igortuag.com
+
+# Sitemaps
+Sitemap: https://my-trips.igortuag.com/sitemap.xml
